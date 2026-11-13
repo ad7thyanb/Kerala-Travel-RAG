@@ -1,56 +1,77 @@
-# 🌴 Kerala Travel & Tourism Chatbot
+# 🌴 Kerala Travel & Tourism Chatbot (RAG)
 
-An AI-powered Kerala Travel & Tourism Chatbot designed to help users explore tourist destinations, discover popular attractions and find useful travel information about Kerala.
+An intelligent Kerala Travel & Tourism Chatbot built using Python, Streamlit, LangChain concepts and Natural Language Processing techniques. The chatbot helps users explore Kerala's tourist destinations, discover popular attractions and access travel-related information through an interactive question-answering interface.
 
-The chatbot uses a Retrieval-Based Question Answering approach to retrieve relevant information from PDF documents and provide responses based on the available travel knowledge base.
+The project follows a Retrieval-Augmented Generation (RAG) approach, where relevant information is retrieved from PDF documents to provide context-based answers to user queries.
 
 ## 🚀 Project Overview
 
-Kerala Travel RAG is a Python-based chatbot that allows users to ask questions about Kerala tourism through an interactive chat interface.
+Kerala Travel RAG is a document-based chatbot designed to make travel information about Kerala easily accessible.
 
-Instead of manually searching through multiple travel documents, users can simply enter their questions and the chatbot searches the available PDF documents to find relevant information.
+Users can ask questions about tourist destinations, popular attractions and travel recommendations instead of manually searching through multiple documents.
 
-The project demonstrates the practical implementation of document processing, text extraction, information retrieval and similarity-based search.
+The application processes Kerala tourism PDF documents, extracts relevant information and retrieves the most suitable content based on the user's questions.
 
-## ✨ Features
+## ✨ Key Features
 
 - 💬 Interactive chatbot interface using Streamlit.
 - 📄 Extracts travel information from PDF documents.
-- 🔍 Searches relevant information using TF-IDF vectorization.
-- 🧠 Uses cosine similarity to identify relevant document content.
-- 📚 Retrieves the top 3 relevant text sections for user queries.
+- 🔗 LangChain framework for building document-based RAG applications.
+- 🔍 Retrieves relevant information using text similarity techniques.
+- 🧠 Uses TF-IDF vectorization and cosine similarity.
+- 📚 Identifies the top 3 relevant document sections.
 - 🗺️ Provides information about Kerala tourist destinations.
 - 💬 Maintains conversation history during the session.
-- ⚡ Uses Streamlit caching to improve performance.
+- ⚡ Uses Streamlit caching to improve application performance.
 
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| Streamlit | Chatbot web interface |
-| Scikit-learn | Text vectorization and similarity calculation |
-| TF-IDF | Text representation |
-| Cosine Similarity | Finding relevant document content |
+| Streamlit | Interactive chatbot web interface |
+| LangChain | Framework for developing RAG and document-based applications |
 | PyPDF | Extracting text from PDF documents |
+| Scikit-learn | Text processing and similarity calculations |
+| TF-IDF | Converting text into numerical representations |
+| Cosine Similarity | Identifying relevant document sections |
+| NLP | Natural Language Processing and text retrieval |
 
 ## ⚙️ How It Works
 
-The chatbot follows a simple retrieval-based workflow.
+The chatbot follows a document-based information retrieval workflow.
 
-1. **Document Loading:** The application loads PDF documents containing Kerala travel and tourism information.
+**1. Document Loading**
 
-2. **Text Extraction:** PyPDF extracts text from the uploaded travel documents.
+Kerala travel and tourism information is collected from PDF documents.
 
-3. **Text Chunking:** Extracted text is divided into smaller sections for easier searching.
+**2. Text Extraction**
 
-4. **TF-IDF Vectorization:** The text is converted into numerical representations using TF-IDF.
+PyPDF extracts readable text from the PDF documents.
 
-5. **User Query:** Users enter questions through the Streamlit chatbot interface.
+**3. Text Chunking**
 
-6. **Similarity Search:** Cosine similarity compares the user's question with the document sections.
+The extracted content is divided into smaller sections to make information retrieval easier.
 
-7. **Information Retrieval:** The three most relevant sections are selected and displayed as the chatbot response.
+**4. Document Processing with LangChain**
+
+LangChain can be used to manage document loading, text splitting and retrieval workflows within the RAG architecture.
+
+**5. Text Vectorization**
+
+TF-IDF converts document content and user queries into numerical representations.
+
+**6. User Query Processing**
+
+Users enter travel-related questions through the Streamlit chatbot interface.
+
+**7. Similarity Search**
+
+Cosine similarity compares the user's query with available document sections to identify relevant information.
+
+**8. Information Retrieval**
+
+The chatbot retrieves the top 3 relevant sections and displays the matching information to the user.
 
 ## 📂 Project Structure
 
@@ -83,7 +104,7 @@ cd Kerala-Travel-RAG
 ### 3. Install Required Libraries
 
 ```bash
-pip install streamlit pypdf scikit-learn
+pip install streamlit pypdf scikit-learn langchain
 ```
 
 ### 4. Add Travel Documents
@@ -96,34 +117,42 @@ Place your Kerala travel and tourism PDF documents inside the `data` folder.
 streamlit run app.py
 ```
 
-The application will open in your browser.
+The chatbot will open in your default web browser.
 
 ## 💡 Example Questions
 
-You can try questions such as:
+Users can ask questions such as:
 
 - What are the popular tourist destinations in Kerala?
 - What are the best places to visit in Munnar?
 - What are the major attractions in Alleppey?
 - Which places are suitable for nature lovers?
-- What are some popular travel destinations in Wayanad?
+- What are some popular destinations in Wayanad?
+- What are the best tourist attractions in Kochi?
+- Which places are ideal for a family trip in Kerala?
 
-The chatbot retrieves relevant information from its available PDF documents.
+The chatbot searches its available travel documents and retrieves relevant information.
 
-## 🎯 Project Objective
+## 🎯 Project Objectives
 
-The main objective of this project is to explore how Python, Natural Language Processing techniques and information retrieval methods can be used to build an interactive chatbot.
-
-It also provides practical experience in PDF data extraction, text preprocessing, feature extraction, similarity measurement and building a simple web application.
+- Build an interactive travel chatbot using Python.
+- Explore Retrieval-Augmented Generation (RAG) concepts.
+- Understand document processing and information retrieval.
+- Work with PDF extraction and text preprocessing.
+- Explore LangChain for document-based AI applications.
+- Implement similarity-based search techniques.
+- Develop an interactive application using Streamlit.
 
 ## 🔮 Future Improvements
 
-- Implement advanced Retrieval-Augmented Generation (RAG).
-- Integrate Large Language Models (LLMs) for natural conversational responses.
-- Add multilingual support for Malayalam and English.
+- Integrate Large Language Models (LLMs) for more natural conversational responses.
+- Implement a complete LangChain-based RAG pipeline.
+- Integrate vector databases for improved document retrieval.
+- Add Malayalam and multilingual support.
 - Include more verified Kerala tourism documents.
-- Improve document retrieval and response accuracy.
-- Add live weather and travel information integration.
+- Improve retrieval accuracy and response quality.
+- Integrate live weather and travel information.
+- Add personalized travel recommendations and itinerary planning.
 
 ## 👨‍💻 Developer
 
@@ -132,6 +161,8 @@ It also provides practical experience in PDF data extraction, text preprocessing
 BCA Graduate | Aspiring Data Analyst | Data Science with AI
 
 GitHub: [@ad7thyanb](https://github.com/ad7thyanb)
+
+Project Repository: [Kerala Travel RAG](https://github.com/ad7thyanb/Kerala-Travel-RAG)
 
 ---
 
